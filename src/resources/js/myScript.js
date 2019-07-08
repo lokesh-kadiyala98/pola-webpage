@@ -89,7 +89,7 @@ $(document).ready(function() {
     });
 
     $('.js--section-heartCounter').waypoint(function(direction) {
-        $('.js--section-heartCounter').addClass('animated swing');
+        $('.js--section-heartCounter').addClass('animated tada');
     }, {
         offset: '50%'
     });
