@@ -16,7 +16,7 @@ class testimonalSection extends Component {
                     <div className="col-xs-12 col-sm-4">
                         <blockquote>
                             Inexpensive, healthy and great-tasting food. We have lots of restaurants here at Infantry Road, Ballari. But, no one comes even close to Pola's. Me and my family are so in love!
-                            <cite><img src={require('../resources/img/customer-2.jpg')} alt="Customer 2" />Customer 2</cite>
+                            <cite><img src={require('../resources/img/customer-2.jpg')} alt="Customer 2" />Arvind C</cite>
                         </blockquote>
                     </div>
                     <div className="col-xs-12 col-sm-4">
