@@ -45,7 +45,7 @@ class App extends Component {
             <NavBar />
             <div className="hero-text-box">
               <h1>What's Up! Foodie.<br />Feeling Hungry?</h1>
-              <a className="nb-btn nb-btn-full" rel="noopener noreferrer" target="_blank" href="https://www.swiggy.com/restaurants/polas-harbour-lounge-infantry-road-vijayanagar-colony-ballari-107321">Order On Zomato</a>
+              <a className="nb-btn nb-btn-full" rel="noopener noreferrer" target="_blank" href="https://www.swiggy.com/restaurants/polas-harbour-lounge-infantry-road-vijayanagar-colony-ballari-107321">Order On Swiggy</a>
               <a className="nb-btn nb-btn-ghost" href="#features">Show me more</a>
             </div>
           </div>

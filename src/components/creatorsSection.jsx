@@ -33,7 +33,7 @@ class creatorsSection extends Component {
                         <div className="developer-box developer-info">
                             <div className="developer-img">
                                 <img src={require('../resources/img/Rudresh N.jpg')} alt="Developer" />
-                                <h3>Kiran C</h3>
+                                <h3>Rudresh N</h3>
                             </div>
                             <div>
                             <p>If he looks any geeky to you that's only because of his spects but nothing else.</p>

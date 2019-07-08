@@ -10,7 +10,7 @@ class testimonalSection extends Component {
                     <div className="col-xs-12 col-sm-4">
                         <blockquote>
                             Pola's is just awesome! First time in Pola's me and my friends strolled by just to take a few pictures and have some fun. Now that I got used to it, it's become our hangout spot.
-                            <cite><img src={require('../resources/img/customer-1.jpg')} alt="Customer 1" />Customer 1</cite>
+                            <cite><img src={require('../resources/img/customer-1.jpg')} alt="Customer 1" />Riyaz</cite>
                         </blockquote>
                     </div>
                     <div className="col-xs-12 col-sm-4">
@@ -21,8 +21,8 @@ class testimonalSection extends Component {
                     </div>
                     <div className="col-xs-12 col-sm-4">
                         <blockquote>
-                            My friends and I love food at Pola's. We live in Anathapur Road and Pola's is at another side of Ballari. So we end up ordering food. The way they pack the food is just so aesthetic.
-                            <cite><img src={require('../resources/img/customer-3.jpg')} alt="Customer 3" />Customer 3</cite>
+                            My friends and I love food at Pola's. We stay at Gandhi Nagar and Pola's is at another side of Ballari. So we end up ordering food. The way they pack the food is just so aesthetic.
+                            <cite><img src={require('../resources/img/customer-3.jpg')} alt="Customer 3" />Gagana Bhari</cite>
                         </blockquote>
                     </div>
                 </div>
