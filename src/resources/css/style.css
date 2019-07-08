@@ -211,6 +211,12 @@ input[type=submit]:active {
     color: #fff;
 }
 
+/* ----- Heart Counter ------ */
+.counter {
+    padding: 4px;
+    border: 1px solid black; 
+}
+
 /* ----- PARAGRAPHS ----- */
 .long-copy {
     line-height: 145%;

@@ -88,6 +88,12 @@ $(document).ready(function() {
         offset: '50%'
     });
 
+    $('.js--section-heartCounter').waypoint(function(direction) {
+        $('.js--section-heartCounter').addClass('animated swing');
+    }, {
+        offset: '50%'
+    });
+
     /* Mobile navigation */
     $('.js--nav-icon').click(function() {
         var nav = $('.js--main-nav');

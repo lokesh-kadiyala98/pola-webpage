@@ -57,7 +57,7 @@ class opinionForm extends Form {
 
     render() { 
         return ( 
-            <div className="container form-group">
+            <div className="container form-group " id="opinionForm">
                 <h2>PHEWW!! YOU HAVE SCROLLED TOO FAR.</h2>
                 <p style={{textAlign: 'center', marginBottom: '3em'}} className="long-copy">
                     Which means you might have something to tell us.<br/>

@@ -6,6 +6,7 @@ import './resources/css/queries.css';
 import './resources/js/myScript';
 import 'waypoints/lib/jquery.waypoints.min.js';
 import NavBar from './components/navBar';
+import HeartCounter from './components/heartCounter';
 import FeaturesSection from './components/featuresSection';
 import MenusSection from './components/menusSection';
 import LocationSection from './components/locationSection';
@@ -49,6 +50,7 @@ class App extends Component {
             </div>
           </div>
         </header>
+        <HeartCounter number={this.state.heartCount}/>
         <FeaturesSection />
         <MenusSection />
         <LocationSection />
