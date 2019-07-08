@@ -26,34 +26,32 @@ class opinionForm extends Form {
         //call the server, and redirect to another page
         //..
 
-        // const params = { 
-        //     email: this.state.data.email, 
-        //     name: this.state.data.name,
-        //     experience: this.state.data.experience, 
-        //     number: this.state.data.number, 
-        //     like: this.state.data.like 
-        // };
+        const params = { 
+            email: this.state.data.email, 
+            name: this.state.data.name,
+            experience: this.state.data.experience, 
+            number: this.state.data.number, 
+            like: this.state.data.like 
+        };
 
-        // var esc = encodeURIComponent;
-        // var query = Object.keys(params)
-        //     .map(k => esc(k) + '=' + esc(params[k]))
-        //     .join('&');
+        var esc = encodeURIComponent;
+        var query = Object.keys(params)
+            .map(k => esc(k) + '=' + esc(params[k]))
+            .join('&');
 
-        // fetch('http://localhost:5000/send_opinion?'+query)
-        //     .then(response => response.json())
-        //     .then(response => {
-        //         if(response.success){
-        //             toast.success('Thankyou!! We took a note of that.')
-        //         }else{
-        //             toast.error('UH! OH! Something\'s wrong. It\'s on us.')
-        //         }
-        //     })
-        //     .catch(response => {
-        //         toast.error('UH! OH! Something\'s wrong. It\'s on us.')
-        //         console.log(response)
-        //     })
-
-        toast.info('Backend is temporarily unavailable. It\'s on us not on you.')
+        fetch('https://pola-server-api.herokuapp.com/send_opinion?'+query)
+            .then(response => response.json())
+            .then(response => {
+                if(response.success){
+                    toast.success('Thankyou!! We took a note of that.')
+                }else{
+                    toast.error('UH! OH! Something\'s wrong. It\'s on us.')
+                }
+            })
+            .catch(response => {
+                toast.error('UH! OH! Something\'s wrong. It\'s on us not on you.')
+                console.log(response)
+            })
         
     };
 

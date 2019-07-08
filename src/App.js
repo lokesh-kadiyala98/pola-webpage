@@ -27,14 +27,13 @@ class App extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   fetch('http://localhost:5000/heart_count')
-  //     .then(response => response.json())
-  //     .then(data => { 
-  //       const heartCount = data[0].heartCount
-  //       this.setState({ heartCount })
-  //     })
-  // }
+  componentDidMount() {
+    fetch('https://pola-server-api.herokuapp.com/heart_count')
+      .then(response => response.json())
+      .then(data => { 
+        this.setState( { heartCount: data[0].heartCount } )
+      })
+  }
     
   render() { 
     
