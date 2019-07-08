@@ -11,7 +11,9 @@ const NavBar = () => {
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#developers">Creators</a></li>
             </ul>
-            <a href="#" style={{backgroundColor: 'transparent', outline: 'none', border: '0px solid black'}} className="mobile-nav-icon js--nav-icon"><i className="fas fa-bars"></i></a>
+            <a className="mobile-nav-icon js--nav-icon">
+                <i className="fas fa-bars"></i>
+            </a>
         </nav>
     );
 }
