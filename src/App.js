@@ -27,14 +27,14 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch('http://localhost:5000/heart_count')
-      .then(response => response.json())
-      .then(data => { 
-        const heartCount = data[0].heartCount
-        this.setState({ heartCount })
-      })
-  }
+  // componentDidMount() {
+  //   fetch('http://localhost:5000/heart_count')
+  //     .then(response => response.json())
+  //     .then(data => { 
+  //       const heartCount = data[0].heartCount
+  //       this.setState({ heartCount })
+  //     })
+  // }
     
   render() { 
     
