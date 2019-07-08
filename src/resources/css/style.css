@@ -464,6 +464,36 @@ footer p {
     text-align: center;
 }
 
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.fa-github {
+    color: #4078c0;
+}
+
+.fa-react {
+    color: #00d8ff;
+}
+
+.fa-js {
+    color: #f7df1e;
+}
+
+.fa-node-js {
+    color: #6cc24a;
+}
+
 .btn-outline-orange {
     color: #e67e22;
     border-color: #e67e22;
