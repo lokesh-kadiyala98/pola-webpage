@@ -11,6 +11,10 @@
     font-size: 20px;
 }
 
+ul {
+    margin-bottom: auto;
+}
+
 .row {
     max-width: 1140px !important;
     margin: 0 auto !important;
