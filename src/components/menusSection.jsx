@@ -27,29 +27,31 @@ class menusSection extends Component {
         images: [
             img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22,
         ],
-        restaurants: {
-            restaurant1: { showModal: false },
-            restaurant2: { showModal: false },
-            restaurant3: { showModal: false },
-            restaurant4: { showModal: false },
-            restaurant5: { showModal: false },
-            restaurant6: { showModal: false },
-            restaurant7: { showModal: false },
-            restaurant8: { showModal: false },
-        },
+        //the code commented below is to display modals is no longer necessary
+        // restaurants: {
+        //     restaurant1: { showModal: false },
+        //     restaurant2: { showModal: false },
+        //     restaurant3: { showModal: false },
+        //     restaurant4: { showModal: false },
+        //     restaurant5: { showModal: false },
+        //     restaurant6: { showModal: false },
+        //     restaurant7: { showModal: false },
+        //     restaurant8: { showModal: false },
+        // },
+
     };
 
-    handleOpen = (restaurant) => {
-        const restaurants = this.state.restaurants;
-        restaurants[restaurant].showModal = true;
-        this.setState({ restaurants });
-    };
+    // handleOpen = (restaurant) => {
+    //     const restaurants = this.state.restaurants;
+    //     restaurants[restaurant].showModal = true;
+    //     this.setState({ restaurants });
+    // };
 
-    handleClose = (restaurant) => {
-        const restaurants = this.state.restaurants;
-        restaurants[restaurant].showModal = false;
-        this.setState({ restaurants });
-    };
+    // handleClose = (restaurant) => {
+    //     const restaurants = this.state.restaurants;
+    //     restaurants[restaurant].showModal = false;
+    //     this.setState({ restaurants });
+    // };
 
     getRandomImage() {
         const arr = this.state.images;

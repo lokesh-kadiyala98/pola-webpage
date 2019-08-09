@@ -6,7 +6,7 @@ const locationSection = () => {
             <h2>We're currently only in Ballari</h2>
             <div className="row js--wp-3 js--wp-2">
                 <div className="col-xs-12 col-md-4 box">
-                    <img src={require('../resources/img/ballari.jpg')} alt="Ballari" />
+                    <img src={require('../resources/img/ballari.jpg')} alt="Ballari Fort" />
                 </div>
                 <div className="col-xs-12 col-md-8 box">
                     <h3>Ballari</h3>
@@ -16,7 +16,7 @@ const locationSection = () => {
                     </div>
                     <div className="city-feature">
                     <i className="far fa-clock icon-small"></i>
-                        Mon - Thurs: 12AM to 11PM
+                        Mon - Sun 12AM to 11PM
                     </div>
                     <div className="city-feature">
                     <i className="fas fa-phone icon-small"></i>
@@ -28,16 +28,6 @@ const locationSection = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="row">
-                <div className="col-xs-12">
-                    <div className="mapouter">
-                        <div className="gmap_canvas">
-                            <iframe width="899" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=pola's%20harbour&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <a href="https://www.vpnchief.com">vpnchief.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </section>
     );
 }
