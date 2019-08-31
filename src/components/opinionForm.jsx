@@ -6,6 +6,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 class opinionForm extends Form {
     
+    constructor(props) {
+        super(props)
+        this.baseState = this.state     
+    }
+
     state = {
         data: { email: '', name: '', number: '', experience: '',like: false},
         errors: { },
@@ -44,6 +49,8 @@ class opinionForm extends Form {
             .then(response => {
                 if(response.success){
                     toast.success('Thankyou!! We took a note of that.')
+                    this.props.incrementHeartCount();
+                    this.setState(this.baseState)
                 }else{
                     toast.error('UH! OH! Something\'s wrong. It\'s on us.')
                 }

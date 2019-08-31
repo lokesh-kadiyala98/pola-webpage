@@ -29,11 +29,19 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.getHeartCount()
+  }
+
+  getHeartCount() {
     fetch('https://pola-server-api.herokuapp.com/heart_count')
       .then(response => response.json())
       .then(data => { 
         this.setState( { heartCount: data[0].heartCount } )
       })
+  }
+
+  incrementHeartCount() {
+    this.getHeartCount()
   }
     
   render() { 
@@ -56,7 +64,7 @@ class App extends Component {
         <LocationSection />
         <TestimonalSection />
         <CreatorsSection />
-        <OpinionForm />
+        <OpinionForm incrementHeartCount={() => this.incrementHeartCount()} />
         <FooterComponent />
       </React.Fragment>
     );
