@@ -348,8 +348,8 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 .section-testimonials {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('./img/testimonal-background.jpg');
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('./img/testimonal-background.jpg');
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('./img/testimonal-background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('./img/testimonal-background.jpg');
     background-size: cover;
     background-attachment: fixed;
 }

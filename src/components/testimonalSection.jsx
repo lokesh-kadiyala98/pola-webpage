@@ -5,7 +5,7 @@ class testimonalSection extends Component {
     render() { 
         return ( 
             <section className="section-testimonials" id="testimonials">
-                <h2>Look what our customers have to say</h2>
+                <h2>Look what our customers have got to say</h2>
                 <div className="row justify-content-md-center">
                     <div className="col-xs-12 col-sm-4">
                         <blockquote>

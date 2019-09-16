@@ -24,10 +24,10 @@ const featuresSection = () => {
                     </p>
                 </div>
                 <div className="col-md-3 box">
-                    <i className="fas fa-carrot icon-big"></i>
-                    <h3>100% Vegan</h3>
+                    <i className="fas fa-drumstick-bite icon-big"></i>
+                    <h3>Non - Vegan</h3>
                     <p>
-                        We serve 100% pure vegan foods. All our vegetables are fresh, organic and local. Good for your health, and it also tastes better!
+                        Yea! We are not pure veg anymore. Lately we opened a seperate A/C non-veg section too.
                     </p>
                 </div>
                 <div className="col-md-3 box">

@@ -25,7 +25,28 @@ import img22 from '../resources/img/22.jpg';
 class menusSection extends Component {
     state = {
         images: [
-            img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22,
+            {image: img1, description: 'Polas ceil view'}, 
+            {image: img2, description: 'Polas top view'}, 
+            {image: img3, description: 'Cycling man architecture'},
+            {image: img4, description: 'Polas top road view dining'},
+            {image: img5, description: 'Colourful cups'},
+            {image: img6, description: 'Polas ship themed house'},
+            {image: img7, description: 'Lemon tea'},
+            {image: img8, description: 'Sizzling brownie'},
+            {image: img9, description: 'Dhaba Cafe'},
+            {image: img10, description: 'Nirvana'},
+            {image: img11, description: 'Taste of Rajwada'},
+            {image: img12, description: 'Thancos natural icecream'},
+            {image: img13, description: 'U.S. Pizza'},
+            {image: img14, description: 'Ship themed room inner view'},
+            {image: img15, description: 'Pola view from roof'},
+            {image: img16, description: 'U.S. Pizza'},
+            {image: img17, description: 'Oreo icecreame'},
+            {image: img18, description: 'U.S. Pizza'},
+            {image: img19, description: 'Polas seating arrangement'},
+            {image: img20, description: 'Product show at Polas'},
+            {image: img21, description: 'Ship themed house'},
+            {image: img22, description: 'Empty space for parties'},
         ],
         //the code commented below is to display modals is no longer necessary
         // restaurants: {
@@ -55,9 +76,9 @@ class menusSection extends Component {
 
     getRandomImage() {
         const arr = this.state.images;
-        const ri = Math.floor(Math.random() * arr.length);
-        const rs = arr.splice(ri, 1);
-        return rs;
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        const randomImage = arr.splice(randomIndex, 1);
+        return randomImage;
     }
 
     render() {
@@ -67,51 +88,50 @@ class menusSection extends Component {
         //<ModalComponent show={this.state.restaurants.restaurant8.showModal} onHide={() => this.handleClose('restaurant8')} name="restaurant8" />
         //onClick={() => this.handleOpen('restaurant8')} (in the image tag)
         //data-toggle="modal" data-target="#restaurantMenuModal" (in the li tag)
-
         return ( 
             <React.Fragment>
                 <section className="section-menus" id="gallery">
                     <ul className="menus-showcase">
                         <li>
                             <figure className="menu-photo">
-                                <img src={img1} alt="Pola seating arrangement" />
+                                <img src={img1[0].image} alt={img1[0].description} />
                             </figure>
                         </li>
                         <li>
                             <figure className="menu-photo">
-                                <img src={img2} alt="pola seating arrangement 2" />
+                                <img src={img2[0].image} alt={img2[0].description} />
                             </figure>
                         </li>
                         <li>
                             <figure className="menu-photo">
-                                <img src={img3} alt="Modern wall architecture in Pola" />
+                                <img src={img3[0].image} alt={img3[0].description} />
                             </figure>
                         </li>
                         <li>
                             <figure className="menu-photo">
-                                <img src={img4} alt="Pola night view" />
+                                <img src={img4[0].image} alt={img4[0].description} />
                             </figure>
                         </li>
                     </ul>
                     <ul className="menus-showcase">
                         <li>
                             <figure className="menu-photo">
-                                <img src={img5} alt="Colourful cups" />
+                                <img src={img5[0].image} alt={img5[0].description} />
                             </figure>
                         </li>
                         <li>
                             <figure className="menu-photo">
-                                <img src={img6} alt="Ship model in Pola" />
+                                <img src={img6[0].image} alt={img6[0].description} />
                             </figure>
                         </li>
                         <li>
                             <figure className="menu-photo">
-                                <img src={img7} alt="Lemon tea" />
+                                <img src={img7[0].image} alt={img7[0].description} />
                             </figure>
                         </li>
                         <li>
                             <figure className="menu-photo">
-                                <img src={img8} alt="Granola with cherries and strawberries" />
+                                <img src={img8[0].image} alt={img8[0].description} />
                             </figure>
                         </li>
                     </ul>
