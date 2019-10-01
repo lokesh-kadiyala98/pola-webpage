@@ -25,54 +25,42 @@ import img22 from '../resources/img/22.jpg';
 class menusSection extends Component {
     state = {
         images: [
-            {image: img1, description: 'Polas ceil view'}, 
-            {image: img2, description: 'Polas top view'}, 
-            {image: img3, description: 'Cycling man architecture'},
-            {image: img4, description: 'Polas top road view dining'},
-            {image: img5, description: 'Colourful cups'},
-            {image: img6, description: 'Polas ship themed house'},
-            {image: img7, description: 'Lemon tea'},
-            {image: img8, description: 'Sizzling brownie'},
-            {image: img9, description: 'Dhaba Cafe'},
-            {image: img10, description: 'Nirvana'},
-            {image: img11, description: 'Taste of Rajwada'},
-            {image: img12, description: 'Thancos natural icecream'},
-            {image: img13, description: 'U.S. Pizza'},
-            {image: img14, description: 'Ship themed room inner view'},
-            {image: img15, description: 'Pola view from roof'},
-            {image: img16, description: 'U.S. Pizza'},
-            {image: img17, description: 'Oreo icecreame'},
-            {image: img18, description: 'U.S. Pizza'},
-            {image: img19, description: 'Polas seating arrangement'},
-            {image: img20, description: 'Product show at Polas'},
-            {image: img21, description: 'Ship themed house'},
-            {image: img22, description: 'Empty space for parties'},
         ],
-        //the code commented below is to display modals is no longer necessary
-        // restaurants: {
-        //     restaurant1: { showModal: false },
-        //     restaurant2: { showModal: false },
-        //     restaurant3: { showModal: false },
-        //     restaurant4: { showModal: false },
-        //     restaurant5: { showModal: false },
-        //     restaurant6: { showModal: false },
-        //     restaurant7: { showModal: false },
-        //     restaurant8: { showModal: false },
-        // },
-
     };
 
-    // handleOpen = (restaurant) => {
-    //     const restaurants = this.state.restaurants;
-    //     restaurants[restaurant].showModal = true;
-    //     this.setState({ restaurants });
-    // };
+    componentWillMount() {
+        this.updateImages()
+    }
 
-    // handleClose = (restaurant) => {
-    //     const restaurants = this.state.restaurants;
-    //     restaurants[restaurant].showModal = false;
-    //     this.setState({ restaurants });
-    // };
+    updateImages() {
+        console.log("called")
+        this.setState( { images: 
+            [
+                {image: img1, description: 'Polas ceil view'}, 
+                {image: img2, description: 'Polas top view'}, 
+                {image: img3, description: 'Cycling man architecture'},
+                {image: img4, description: 'Polas top road view dining'},
+                {image: img5, description: 'Colourful cups'},
+                {image: img6, description: 'Polas ship themed house'},
+                {image: img7, description: 'Lemon tea'},
+                {image: img8, description: 'Sizzling brownie'},
+                {image: img9, description: 'Dhaba Cafe'},
+                {image: img10, description: 'Nirvana'},
+                {image: img11, description: 'Taste of Rajwada'},
+                {image: img12, description: 'Thancos natural icecream'},
+                {image: img13, description: 'U.S. Pizza'},
+                {image: img14, description: 'Ship themed room inner view'},
+                {image: img15, description: 'Pola view from roof'},
+                {image: img16, description: 'U.S. Pizza'},
+                {image: img17, description: 'Oreo icecreame'},
+                {image: img18, description: 'U.S. Pizza'},
+                {image: img19, description: 'Polas seating arrangement'},
+                {image: img20, description: 'Product show at Polas'},
+                {image: img21, description: 'Ship themed house'},
+                {image: img22, description: 'Empty space for parties'},
+            ]
+         })
+    }
 
     getRandomImage() {
         const arr = this.state.images;
@@ -84,10 +72,9 @@ class menusSection extends Component {
     render() {
         const img1 = this.getRandomImage(), img2 = this.getRandomImage(), img3 = this.getRandomImage(), img4 = this.getRandomImage(), img5 = this.getRandomImage(), 
         img6 = this.getRandomImage(), img7 = this.getRandomImage(), img8 = this.getRandomImage();
-
-        //<ModalComponent show={this.state.restaurants.restaurant8.showModal} onHide={() => this.handleClose('restaurant8')} name="restaurant8" />
-        //onClick={() => this.handleOpen('restaurant8')} (in the image tag)
-        //data-toggle="modal" data-target="#restaurantMenuModal" (in the li tag)
+        if(this.state.images.length < 8){
+            this.updateImages();
+        }
         return ( 
             <React.Fragment>
                 <section className="section-menus" id="gallery">

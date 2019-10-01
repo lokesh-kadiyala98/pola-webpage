@@ -8,11 +8,13 @@ class opinionForm extends Form {
     
     constructor(props) {
         super(props)
+        
+        //save initial state to clear inputs on success.
         this.baseState = this.state     
     }
 
     state = {
-        data: { email: '', name: '', number: '', experience: '',like: false},
+        data: { email: '', name: '', number: '', experience: '', like: false},
         errors: { },
     };
     
