@@ -33,7 +33,6 @@ class menusSection extends Component {
     }
 
     updateImages() {
-        console.log("called")
         this.setState( { images: 
             [
                 {image: img1, description: 'Polas ceil view'}, 
