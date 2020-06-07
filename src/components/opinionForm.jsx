@@ -1,8 +1,10 @@
 import React from 'react';
 import Joi from 'joi';
 import Form from './form';
+import axios from 'axios'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import config from '../config.json'
 
 class opinionForm extends Form {
     
@@ -15,6 +17,7 @@ class opinionForm extends Form {
 
     state = {
         data: { email: '', name: '', number: '', experience: '', like: false},
+        loading: false,
         errors: { },
     };
     
@@ -28,40 +31,24 @@ class opinionForm extends Form {
     };
     
     //server code
-    doSubmit = () => {
-        
-        //call the server, and redirect to another page
-        //..
-
-        const params = { 
-            email: this.state.data.email, 
-            name: this.state.data.name,
-            experience: this.state.data.experience, 
-            number: this.state.data.number, 
-            like: this.state.data.like 
-        };
-
-        var esc = encodeURIComponent;
-        var query = Object.keys(params)
-            .map(k => esc(k) + '=' + esc(params[k]))
-            .join('&');
-
-        fetch('https://pola-server-api.herokuapp.com/send_opinion?'+query)
-            .then(response => response.json())
-            .then(response => {
-                if(response.success){
-                    toast.success('Thankyou!! We took a note of that.')
-                    this.props.incrementHeartCount();
-                    this.setState(this.baseState)
-                }else{
-                    toast.error('UH! OH! Something\'s wrong. It\'s on us.')
-                }
+    doSubmit = async () => {
+        this.setState({ loading: true })
+        try {
+            const { data } = await axios({
+                method: 'post',
+                url: config.apiEndPoint + '/send_opinion',
+                data: this.state.data
             })
-            .catch(response => {
-                toast.error('UH! OH! Something\'s wrong. It\'s on us not on you.')
-                console.log(response)
-            })
-        
+
+            if(data.success) {
+                toast.success(data.success)
+                this.props.updateHeartCount()
+                this.setState(this.baseState)
+            }
+        } catch(ex) {
+            toast.error("UH`OH! Something went wrong. It's on us not on you")
+        }
+        this.setState({ loading: false })
     };
 
     render() { 
@@ -80,7 +67,10 @@ class opinionForm extends Form {
                     {this.renderLike('like' ,'Do you like our food?', this.state.data.like)}
                     <br />
                     <br />
-                    {this.renderButton('Send It!!')}
+                    {this.state.loading ?
+                        this.renderLoadingButton('Sending...'):
+                        this.renderButton('Send It!!')
+                    }
                 </form>
             </div>
          );

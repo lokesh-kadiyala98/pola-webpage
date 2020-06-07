@@ -139,6 +139,15 @@ class Form extends Component {
             </button>
         );
     };
+
+    renderLoadingButton(label) {
+        return (
+            <button className="btn btn-outline-orange form-group float-right" type="button" disabled>
+                <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                {label}
+            </button>
+        )
+    }
 }
  
 export default Form;

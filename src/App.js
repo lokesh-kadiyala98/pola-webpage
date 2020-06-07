@@ -15,8 +15,9 @@ import CreatorsSection from './components/creatorsSection';
 import OpinionForm from './components/opinionForm';
 import FooterComponent from './components/footerComponent';
 import { toast } from 'react-toastify';
+import axios from 'axios'
 import 'react-toastify/dist/ReactToastify.css';
-
+import config from './config.json'
 toast.configure()
 
 class App extends Component {
@@ -24,7 +25,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      heartCount: 0
+      heartCount: -1
     }
   }
 
@@ -32,20 +33,16 @@ class App extends Component {
     this.getHeartCount()
   }
 
-  getHeartCount() {
-    fetch('https://pola-server-api.herokuapp.com/heart_count')
-      .then(response => response.json())
-      .then(data => { 
-        this.setState( { heartCount: data[0].heartCount } )
-      })
+  async getHeartCount() {
+    const { data } = await axios( config.apiEndPoint + '/heart_count')
+    this.setState({ heartCount: data.count })
   }
 
-  incrementHeartCount() {
+  updateHeartCount() {
     this.getHeartCount()
   }
     
   render() { 
-    
     return (  
       <React.Fragment>
         <header>
@@ -64,7 +61,7 @@ class App extends Component {
         <LocationSection />
         <TestimonalSection />
         <CreatorsSection />
-        <OpinionForm incrementHeartCount={() => this.incrementHeartCount()} />
+        <OpinionForm updateHeartCount={() => this.updateHeartCount()} />
         <FooterComponent />
       </React.Fragment>
     );
